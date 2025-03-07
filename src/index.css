@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(100000000000deg); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px rgba(255, 69, 0, 0.7); }
+  50% { box-shadow: 0 0 25px rgba(255, 69, 0, 1); }
+  100% { box-shadow: 0 0 10px rgba(255, 69, 0, 0.7); }
+}
+
+.fancy-button {
+  margin-top: 10px;
+  padding: 20px 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  border: 3px solid white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+
+  /* 🌈 Moving Rainbow Background */
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  animation: rainbow 5s infinite linear, pulse 2s infinite alternate ease-in-out;
+}
+
+.fancy-button a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.fancy-button:hover {
+  animation: spin 5s infinite linear, rainbow 5s infinite linear, pulse 2s infinite alternate ease-in-out;
+  transform: scale(1.2);
+  border: 3px solid yellow;
+  box-shadow: 0 8px 20px rgba(255, 255, 0, 0.8);
+}
+
+
