@@ -3,12 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 import letTheGameBegin from './assets/let-the-game-begin-jigsaw.gif';
 import MaybeSearch from "./AwsomeStuffHere/MaybeSearch/MaybeSearch";
+import IdkIgraNaKoram from './AwsomeStuffHere/MaybeSearch/IdkIgraNaKoram';
 
 function App() {
 
 
   return (
-    <div className="App" style={{display: 'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center', width: '100vw', height: '100vh'}}>
+    <div className="App" style={{display: 'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center', width: '100vw'}}>
 
       <MaybeSearch></MaybeSearch>
 
@@ -19,6 +20,8 @@ function App() {
           КЛИКНИ ТУК
         </a>
       </button>
+
+      <IdkIgraNaKoram></IdkIgraNaKoram>
 
     </div>
   );
