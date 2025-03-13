@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+.template {
+    border: 4px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    display: grid;
+    grid-template-areas:
+        "item0 . . item1 . . item2"
+        ". item3 . item4 . item5 ."
+        ". . item6 item7 item8 . ."
+        "item9 item10 item11 . item12 item13 item14"
+        ". . item15 item16 item17 . ."
+        ". item18 . item19 . item20 ."
+        "item21 . . item22 . . item23"
+}
+
+.gay-button {
+  position: relative;
+  margin: 50px;
+  width: 250px;
+  height: 70px;
+  background: transparent;
+  border: 5px solid #000000;
+  border-radius: 60px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Calistoga', cursive;
+  font-size: 1.5em;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.gay-button::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100px;
+  background-image: linear-gradient(
+    45deg,
+    #f04d4d 11.36%,
+    #000000 11.36%,
+    #000000 12.5%,
+    #ffd903 12.5%,
+    #ffd903 23.86%,
+    #000000 23.86%,
+    #000000 25%,
+    #2dc40f 25%,
+    #2dc40f 36.36%,
+    #000000 36.36%,
+    #000000 37.5%,
+    #5ba1fc 37.5%,
+    #5ba1fc 48.86%,
+    #000000 48.86%,
+    #000000 50%,
+    #f04d4d 50%,
+    #f04d4d 61.36%,
+    #000000 61.36%,
+    #000000 62.5%,
+    #ffd903 62.5%,
+    #ffd903 73.86%,
+    #000000 73.86%,
+    #000000 75%,
+    #2dc40f 75%,
+    #2dc40f 86.36%,
+    #000000 86.36%,
+    #000000 87.5%,
+    #5ba1fc 87.5%,
+    #5ba1fc 98.86%,
+    #000000 98.86%,
+    #000000 100%
+  );
+  background-size: 200px 200px;
+  animation: barberpole 10s linear infinite;
+  z-index: -1;
+}
+
+.gay-button::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 30px;  
+  background: #000000;
+  border: 5px solid #000;
+  border-radius: 100px;
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+  z-index: -1;
+}
+
+.gay-button:hover {
+  color: #000;
+}
+
+.gay-button:hover::after {
+  background: #fff;
+}
+
+.gay-button:active {
+  color: #fff;
+}
+
+.gay-button:active::before {
+  animation-play-state: paused;
+}
+
+.gay-button:active::after {
+  background: #000;
+}
+
+
+@keyframes barberpole {
+  100% {
+    background-position: 50% 50%;
+  }
+}
