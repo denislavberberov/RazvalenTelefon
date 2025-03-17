@@ -1,5 +1,6 @@
 import { useEffect, useState, Component } from "react"
 import "./IdkCSS.css";
+import HelikopterButton from "../HelikopterButton";
 
 export default function IdkIgraNaKoram() {
 
@@ -357,7 +358,7 @@ function Counter(props) {
             <div style={{ marginTop: "10px" }}>
                 <div>Черен: {props.turnsRemaining.playerOne}</div>
                 <div>Бял: {props.turnsRemaining.playerTwo}</div>
-                <button className="fancy-button" style={{ width: 100, height: 50, fontSize: 15, padding: 0 }} onClick={() => window.location.reload(false)}>Нова игра</button>
+                <HelikopterButton style={{ width: 100, height: 50, fontSize: 15, padding: 0 }} onClick={() => window.location.reload(false)}>Нова игра</HelikopterButton>
             </div>
         </div>
 

@@ -4,6 +4,7 @@ import './App.css';
 import letTheGameBegin from './assets/let-the-game-begin-jigsaw.gif';
 import MaybeSearch from "./AwsomeStuffHere/MaybeSearch/MaybeSearch";
 import IdkIgraNaKoram from './AwsomeStuffHere/MaybeSearch/IdkIgraNaKoram';
+import HelikopterButton from './AwsomeStuffHere/HelikopterButton';
 
 function App() {
 
@@ -15,11 +16,11 @@ function App() {
 
       <img src={letTheGameBegin} style={{width: '500px'}}></img>
 
-      <button className="fancy-button">
-        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" rel="noopener noreferrer">
+      <HelikopterButton>
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0`" target="_blank" rel="noopener noreferrer">
           КЛИКНИ ТУК
         </a>
-      </button>
+      </HelikopterButton>
 
       <IdkIgraNaKoram></IdkIgraNaKoram>
 
