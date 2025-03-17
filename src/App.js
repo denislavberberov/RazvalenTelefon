@@ -16,7 +16,7 @@ function App() {
       <img src={letTheGameBegin} style={{width: '500px'}}></img>
 
       <button className="fancy-button">
-        <a href="https://www.youtube.com/watch?v=_sX1wRQB6jE" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" rel="noopener noreferrer">
           КЛИКНИ ТУК
         </a>
       </button>
