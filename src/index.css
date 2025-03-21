@@ -20,6 +20,21 @@ code {
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
+  1% { transform: rotate(10degdeg); }
+  2% { transform: rotate(25deg); }
+  3% { transform: rotate(50deg); }
+  4% { transform: rotate(100deg); }
+  5% { transform: rotate(150deg); }
+  6% { transform: rotate(300deg); }
+  7% { transform: rotate(600deg); }
+  8% { transform: rotate(3000deg); }
+  9% { transform: rotate(10000deg); }
+  10% { transform: rotate(100000deg); }
+  15% { transform: rotate(1500000deg); }   
+  20% { transform: rotate(200000000deg); }
+  25% { transform: rotate(25000000000deg); }
+  50% { transform: rotate(50000000000deg); }
+  75% { transform: rotate(75000000000deg); }
   100% { transform: rotate(100000000000deg); }
 }
 

@@ -1,0 +1,12 @@
+img {
+    height: 400px;
+}
+
+h1 {
+    font-size: 4rem;
+        background: -webkit-linear-gradient(90deg, rgba(222, 230, 36, 1) 0%, rgba(36, 121, 9, 1) 50%, rgba(255, 0, 52, 1) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: cursive;
+}

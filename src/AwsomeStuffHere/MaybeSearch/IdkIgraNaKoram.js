@@ -1,5 +1,6 @@
 import { useEffect, useState, Component } from "react"
 import "./IdkCSS.css";
+import HelikopterButton from "../HelikopterButton";
 
 export default function IdkIgraNaKoram() {
 
@@ -121,7 +122,7 @@ export default function IdkIgraNaKoram() {
 
     const setActiveMillGroups = (gameTiles) => {
         gameTileGroups = setGameTileGroups(gameTiles)
-        gameTileGroups.map((tileGroup, index) => {
+        gameTileGroups.forEach((tileGroup, index) => {
             const flag = []
             flag[0] = tileGroup.every((tile) => tile.backgroundColor === "black")
             flag[1] = tileGroup.every((tile) => tile.backgroundColor === "lightgray")
@@ -140,7 +141,7 @@ export default function IdkIgraNaKoram() {
 
     const getAllIndexesInMill = () => {
         const localIndexesInMill = []
-        gameTileGroups.map((tileGroup, index) => {
+        gameTileGroups.forEach((tileGroup, index) => {
             if (activeMillGroups[index].hasMill) {
                 tileGroup.forEach(tile => localIndexesInMill.push(tile.id))
             }
@@ -183,7 +184,7 @@ export default function IdkIgraNaKoram() {
     const getNumberOfTilesOnBoard = () => {
         const numberOfTiles = [0, 0]
         if (turnsRemaining.playerOne === 0 && turnsRemaining.playerTwo === 0) {
-            gameTiles.map((tile) => {
+            gameTiles.forEach((tile) => {
                 if (tile.backgroundColor === "black") {
                     numberOfTiles[0] += 1
                 }
@@ -357,7 +358,7 @@ function Counter(props) {
             <div style={{ marginTop: "10px" }}>
                 <div>Черен: {props.turnsRemaining.playerOne}</div>
                 <div>Бял: {props.turnsRemaining.playerTwo}</div>
-                <button className="fancy-button" style={{ width: 100, height: 50, fontSize: 15, padding: 0 }} onClick={() => window.location.reload(false)}>Нова игра</button>
+                <HelikopterButton style={{ width: 100, height: 50, fontSize: 15, padding: 0 }} onClick={() => window.location.reload(false)}>Нова игра</HelikopterButton>
             </div>
         </div>
 
