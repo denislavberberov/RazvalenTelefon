@@ -32,6 +32,7 @@ function App() {
     </div>
     <BoofCounter onClick={()=>setOfferBuff(true)} booffCounter="420"/>
     <ReactModal
+    appElement={document.getElementById('root')}
     isOpen={offerBuff}
     >
       <BoofStream/>
