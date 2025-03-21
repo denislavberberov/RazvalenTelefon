@@ -7,6 +7,7 @@ import HelikopterButton from './AwsomeStuffHere/HelikopterButton';
 import BoofCounter from './AwsomeStuffHere/ZaZaBoof/BoofCounter';
 import ReactModal from 'react-modal';
 import BoofStream from './AwsomeStuffHere/ZaZaBoof/BoofStream';
+import AwesomeCursor from './AwsomeStuffHere/AwesomeCursor/AwesomeCursor';
 
 function App() {
 
@@ -37,6 +38,9 @@ function App() {
     >
       <BoofStream/>
     </ReactModal>
+
+    <AwesomeCursor/>
+
     </div>
   );
 }

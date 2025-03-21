@@ -1,3 +1,19 @@
+* {
+  cursor: none
+}
+
+#cursor_container {
+  border:1px solid #0f0
+}
+
+  .cursor {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 50px;
+    height: auto;
+  }
+
 .App {
   text-align: center;
 }
