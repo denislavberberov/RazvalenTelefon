@@ -1,18 +1,39 @@
+body {
+  background-image: url("assets/bgr.gif");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
 * {
   cursor: none
 }
 
-#cursor_container {
-  border:1px solid #0f0
+
+.cursor {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100px;
+  height: auto;
 }
 
-  .cursor {
-    position: fixed;
-    top:0;
-    left: 0;
-    width: 50px;
-    height: auto;
-  }
+#center-image {
+  position: relative;
+  padding-top: 50px;
+}
+#game-image, #ainsley-image {
+  position: absolute;
+  display: block;
+
+}
+
+#game-image {
+  margin-top: 50px;
+  transition: margin-top 0.5s linear;
+}
+
+#ainsley-image {
+  left: -500px;
+}
 
 .App {
   text-align: center;

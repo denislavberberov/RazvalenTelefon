@@ -15,7 +15,7 @@ window.onmousemove = (event) => {
 const AwesomeCursor = () => {
     return (
         <div id="cursor_container">
-            <img src={cursor} class='cursor' />
+            <img src={cursor} className='cursor' />
         </div>
     )
 }
