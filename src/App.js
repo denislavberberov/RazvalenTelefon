@@ -9,6 +9,7 @@ import BoofCounter from './AwsomeStuffHere/ZaZaBoof/BoofCounter';
 import ReactModal from 'react-modal';
 import BoofStream from './AwsomeStuffHere/ZaZaBoof/BoofStream';
 import AwesomeCursor from './AwsomeStuffHere/AwesomeCursor/AwesomeCursor';
+import MikuMikuBeam from './AwsomeStuffHere/MikuMikuBeam/MikuMikuBeam';
 
 function App() {
 
@@ -31,7 +32,6 @@ function App() {
   ])
 
   const handleAinsley = () => {
-      console.log("handleAinsley")
       heheBoy.current.load();
       heheBoy.current.play().catch(e => console.log("error while trying to play: ", e));
       document.querySelector("#game-image").style.marginTop = "300px"
@@ -40,12 +40,13 @@ function App() {
   const bruh = () => {
     console.log("bruh")
     const sound = cursorSounds.current[Math.floor(Math.random() * cursorSounds.current.length)];
-    console.log(cursorSounds.current, sound);
     if(sound) {
       sound.load();
       sound.play().catch(e => console.log("error while trying to play: ", e));
     }
   }
+
+  const [isBeaming, setIsBeaming] = useState(false);
 
   return (
     <div style={{display: 'flex', flexDirection:'row'}} onClick={bruh}>
@@ -55,12 +56,16 @@ function App() {
       <MaybeSearch></MaybeSearch>
 
       <div id='center-image'>
+        <div id='ainsley'>
+          <img 
+            onClick={handleAinsley}
+            src={Ainsley_Harriott} style={{width: '500px'}}
+            alt= "ainsley"></img>
+            <button id='beam-it-up'
+              onClick={() => setIsBeaming(true)}
+            >Miku miku beam</button>
+        </div>
         <img id='game-image' src={letTheGameBegin} style={{width: '500px'}} alt= "letTheGameBegin"></img>
-        <img id='ainsley'
-          onClick={handleAinsley}
-          src={Ainsley_Harriott} style={{width: '500px'}}
-          alt= "ainsley"></img>
-
       </div>
 
       <HelikopterButton>
@@ -74,13 +79,21 @@ function App() {
     </div>
     <BoofCounter onClick={()=>setOfferBuff(true)} booffCounter="420"/>
     <ReactModal
-    appElement={document.getElementById('root')}
-    isOpen={offerBuff}
+      appElement={document.getElementById('root')}
+      isOpen={offerBuff}
     >
       <BoofStream/>
     </ReactModal>
 
     <AwesomeCursor/>
+
+    {
+      isBeaming && (
+        <MikuMikuBeam
+          onCancel={() => setIsBeaming(false)}
+        />
+      )
+    }
 
     </div>
   );
