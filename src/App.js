@@ -10,6 +10,7 @@ import ReactModal from 'react-modal';
 import BoofStream from './AwsomeStuffHere/ZaZaBoof/BoofStream';
 import AwesomeCursor from './AwsomeStuffHere/AwesomeCursor/AwesomeCursor';
 import MikuMikuBeam from './AwsomeStuffHere/MikuMikuBeam/MikuMikuBeam';
+import mikuBGR from "./assets/miku-miku-beam.gif"
 
 function App() {
 
@@ -62,7 +63,10 @@ function App() {
             src={Ainsley_Harriott} style={{width: '500px'}}
             alt= "ainsley"></img>
             <button id='beam-it-up'
-              onClick={() => setIsBeaming(true)}
+              onClick={() => {
+                const body = document.querySelector("body");
+                body.style.backgroundImage = `url("${mikuBGR}")`;
+                setIsBeaming(true)}}
             >Miku miku beam</button>
         </div>
         <img id='game-image' src={letTheGameBegin} style={{width: '500px'}} alt= "letTheGameBegin"></img>
@@ -90,7 +94,10 @@ function App() {
     {
       isBeaming && (
         <MikuMikuBeam
-          onCancel={() => setIsBeaming(false)}
+          onCancel={() => {
+            
+            setIsBeaming(false);
+          }}
         />
       )
     }
