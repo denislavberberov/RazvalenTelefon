@@ -11,7 +11,7 @@ import BoofStream from "./AwsomeStuffHere/ZaZaBoof/BoofStream";
 import AwesomeCursor from "./AwsomeStuffHere/AwesomeCursor/AwesomeCursor";
 import MikuMikuBeam from "./AwsomeStuffHere/MikuMikuBeam/MikuMikuBeam";
 import mikuBGR from "./assets/miku-miku-beam.gif";
-import CaseOpener from "./AwsomeStuffHere/SigmaCaseOpening/CaseOpener";
+import CaseOpener from "./AwsomeStuffHere/CaseOpener/CaseOpener.jsx";
 
 function App() {
   const [offerBuff, setOfferBuff] = useState(false);
@@ -97,7 +97,7 @@ function App() {
             alt="letTheGameBegin"
           ></img>
         </div>
-        <CaseOpener />
+        <CaseOpener></CaseOpener>
 
         <HelikopterButton>
           <a
