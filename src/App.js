@@ -12,9 +12,12 @@ import AwesomeCursor from "./AwsomeStuffHere/AwesomeCursor/AwesomeCursor";
 import MikuMikuBeam from "./AwsomeStuffHere/MikuMikuBeam/MikuMikuBeam";
 import mikuBGR from "./assets/miku-miku-beam.gif";
 import CaseOpener from "./AwsomeStuffHere/CaseOpener/CaseOpener.jsx";
+import Azbuka from "./AwsomeStuffHere/DaNauchimAzbukata/Azbuka.js";
 
 function App() {
   const [offerBuff, setOfferBuff] = useState(false);
+
+  const [isAzbukaOpen, setIsAzbukaOpen] = useState(false);
 
   const heheBoy = useRef(
     new Audio("ainsley_harriott_and_his_spicy_meatconverttoaudio.mp3")
@@ -44,13 +47,15 @@ function App() {
 
   const bruh = () => {
     console.log("bruh");
-    const sound =
-      cursorSounds.current[
-        Math.floor(Math.random() * cursorSounds.current.length)
-      ];
-    if (sound) {
-      sound.load();
-      sound.play().catch((e) => console.log("error while trying to play: ", e));
+    if(!isAzbukaOpen) {
+      const sound =
+        cursorSounds.current[
+          Math.floor(Math.random() * cursorSounds.current.length)
+        ];
+      if (sound) {
+        sound.load();
+        sound.play().catch((e) => console.log("error while trying to play: ", e));
+      }
     }
   };
 
@@ -69,7 +74,14 @@ function App() {
           width: "60vw",
         }}
       >
-        <MaybeSearch></MaybeSearch>
+        <MaybeSearch />
+        {!isAzbukaOpen &&
+          <button onClick={() => setIsAzbukaOpen(true)}>
+            Da nauchim azbukata
+          </button>
+        }
+
+        <Azbuka isModalOpen={isAzbukaOpen} setIsModalOpen={setIsAzbukaOpen} />
 
         <div id="center-image">
           <div id="ainsley">
