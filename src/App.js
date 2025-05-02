@@ -13,11 +13,14 @@ import MikuMikuBeam from "./AwsomeStuffHere/MikuMikuBeam/MikuMikuBeam";
 import mikuBGR from "./assets/miku-miku-beam.gif";
 import CaseOpener from "./AwsomeStuffHere/CaseOpener/CaseOpener.jsx";
 import Azbuka from "./AwsomeStuffHere/DaNauchimAzbukata/Azbuka.js";
+import EpicBattle from "./AwsomeStuffHere/EpicBattle/EpicBattle.jsx";
 
 function App() {
   const [offerBuff, setOfferBuff] = useState(false);
 
   const [isAzbukaOpen, setIsAzbukaOpen] = useState(false);
+  const [hasEpicBattleStarted, setHasEpicBattleStarted] = useState(false);
+
 
   const heheBoy = useRef(
     new Audio("ainsley_harriott_and_his_spicy_meatconverttoaudio.mp3")
@@ -82,6 +85,9 @@ function App() {
         }
 
         <Azbuka isModalOpen={isAzbukaOpen} setIsModalOpen={setIsAzbukaOpen} />
+
+        {hasEpicBattleStarted && <EpicBattle />}
+        <button onClick={() => setHasEpicBattleStarted(true)}>Start Epic Battle</button>
 
         <div id="center-image">
           <div id="ainsley">
