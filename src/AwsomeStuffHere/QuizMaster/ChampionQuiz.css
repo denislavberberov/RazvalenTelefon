@@ -1,0 +1,119 @@
+.cringe-lol{
+    display: flex;
+    margin: 0;
+}
+
+.lol-img{
+  max-width: 100%;
+}
+
+.feet{
+    max-height: 100%;
+}
+
+.champion-quiz{
+    background-color: #787c7e;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+  
+  .cq-header {
+    display: flex;
+    align-items: center;
+    background: #3f51b5;
+    gap:10px;
+    color: #fff;
+    padding: 0.75rem 1rem;
+  }
+  
+  .cq-back, .cq-restart {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .cq-back:hover {
+    text-decoration: underline;
+  }
+  
+  .cq-title {
+    flex: 1;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  .cq-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .cq-wordle {
+    /* center the Wordle grid */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cq-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .cq-hint-btn {
+    background: #ffca28;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .cq-hint-btn:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+  }
+  .cq-hint-btn:not(:disabled):hover {
+    background: #ffc107;
+  }
+  
+  .cq-hints-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 400px;
+  }
+  .cq-hint-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .aq-img{
+    max-width: 100px;
+    max-height: 100px;
+    aspect-ratio: 1/1;
+    margin-top: 1rem;
+  }
+
+  .aq-hard{
+    box-shadow:1px 1px 5px #333;
+    border-radius:50px;
+  }
+
+  .kesha-video{
+    max-height: 100vh;
+  }

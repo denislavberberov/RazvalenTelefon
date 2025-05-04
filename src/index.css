@@ -13,7 +13,8 @@ code {
 		monospace;
 }
 
-@keyframes rotateBoot {
+/* OKAY BUT WHY? */
+/* @keyframes rotateBoot {
 	0% {
 		transform: rotate(0deg);
 	}
@@ -23,7 +24,7 @@ code {
 	100% {
 		transform: rotate(360deg);
 	}
-}
+} */
 
 @keyframes rainbow {
 	0% {

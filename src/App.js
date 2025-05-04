@@ -14,13 +14,15 @@ import mikuBGR from "./assets/miku-miku-beam.gif";
 import CaseOpener from "./AwsomeStuffHere/CaseOpener/CaseOpener.jsx";
 import Azbuka from "./AwsomeStuffHere/DaNauchimAzbukata/Azbuka.js";
 import EpicBattle from "./AwsomeStuffHere/EpicBattle/EpicBattle.jsx";
+import ChampionQuiz from "./AwsomeStuffHere/QuizMaster/ChampionQuiz.jsx";
+import AbilityQuiz from "./AwsomeStuffHere/QuizMaster/AbilityQuiz.jsx";
 
 function App() {
   const [offerBuff, setOfferBuff] = useState(false);
 
   const [isAzbukaOpen, setIsAzbukaOpen] = useState(false);
   const [hasEpicBattleStarted, setHasEpicBattleStarted] = useState(false);
-
+  const [stage, setStage] = useState('start'); // 'start' | 'menu' | 'champions'
 
   const heheBoy = useRef(
     new Audio("ainsley_harriott_and_his_spicy_meatconverttoaudio.mp3")
@@ -77,6 +79,26 @@ function App() {
           width: "60vw",
         }}
       >
+        <div className="quiz-master">
+          {stage === 'start' && (
+            <button className="start-lol" onClick={() => setStage('menu')}>Play League Quiz</button>
+          )}
+      
+            {stage === 'menu' && (
+              <div className="quiz-menu">
+                <button className="start-lol" onClick={() => setStage('champions')}>
+                  <div className="icon">🏆</div>
+                  <div>Champions</div>
+                </button>
+                <button className="start-lol" onClick={() => setStage('abilities')}>
+                  <div className="icon">✨</div>
+                  <div>Abilities</div>
+                </button>
+              </div>
+                )}
+                {stage === 'champions' && <ChampionQuiz onBack={() => setStage('menu')} />}
+                {stage === 'abilities' && <AbilityQuiz onBack={() => setStage('menu')} />}
+        </div>
         <MaybeSearch />
         {!isAzbukaOpen &&
           <button onClick={() => setIsAzbukaOpen(true)}>
